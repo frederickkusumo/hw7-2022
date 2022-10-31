@@ -50,11 +50,18 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 });
 
-
 document.querySelector("#slider").addEventListener("click", function() {
 	console.log('Volume is', video.volume)
 	video.volume = this.volume;
 	console.log('Volume is', video.volume)
 	console.log(document.querySelector('#volume'))
-	document.querySelector('#volum,')
+	document.querySelector('#volume').innerHTML = video.volume;
+});
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add('oldSchool')
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove('oldSchool')
 });
